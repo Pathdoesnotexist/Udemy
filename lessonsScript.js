@@ -1,4 +1,5 @@
 'use strict';
+
 // console.log(fst);
 // var fst = "внешний вар ";
 // console.log(snd);
