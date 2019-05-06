@@ -1,5 +1,12 @@
-'use strict';
-let a = [1, 2, 3]; 
-let b = [1, 2, 3]; 
-console.log(0 || "" || 2 || undefined || true || falsе);
+let soldier = {
+health: 400,
+armor: 100
+}
 
+let john = {
+    health: 100
+}
+
+john.__proto__ = soldier;
+console.log(john);
+console.log(john.armor);
