@@ -1,6 +1,64 @@
 // 'use strict';
+let bx = document.getElementById('box'),
+    bttn = document.getElementsByTagName('button'),
+    crcl = document.getElementsByClassName('circle'),
+    hrth = document.querySelectorAll('.heart'),
+    oneHrth = document.querySelector('.heart'),
+    wrppr = document.querySelector('.wrapper');
+
+bx.style.backgroundColor = 'blue';
+bttn[1].style.borderRadius = '100%';
+crcl[0].style.backgroundColor = 'red';
+crcl[1].style.backgroundColor = 'orange';
+crcl[2].style.backgroundColor = 'green';
 
 
+//ДВА СПОСОБА ПЕРЕБОРА ДОМ-ЭЛЕМЕНТОВ
+// for (let i = 0; i < hrth.length; i++) {
+//     hrth[i].style.backgroundColor = 'brown';
+// }
+
+// hrth.forEach(function (item, i, hrths) {
+//     item.style.backgroundColor = 'blue';
+// });
+
+let div = document.createElement('div');
+let text = document.createTextNode('Тут был я');
+div.classList.add('black');
+
+//ДВА СПОСОБА ДОБАВЛЕНИЯ ДОМ-ЭЛЕМЕНТОВ В КОНЕЦ ДЕРЕВА
+
+// document.body.appendChild(div);
+// wrppr.appendChild(div);
+
+document.body.insertBefore(div, crcl[0]);
+document.body.removeChild(crcl[1]);
+wrppr.removeChild(hrth[1]);
+
+// div.innerHTML = 'Hello, WORLD!';
+// div.innerHTML = '<h1>Hello, WORLD!</h1>';
+div.textContent = '<h1>Hello, WORLD!</h1>';
+
+document.body.replaceChild(bttn[1], crcl[1]);
+console.log(div);
+// console.log(bx);
+// console.log(bttn);
+// console.log(bttn[0]);
+// console.log(crcl[2]);
+// console.log(hrth[1]);
+// console.log(oneHrth);
+
+
+
+
+
+// ******************
+// TO STRING 
+// 1) 
+// let arc = '23423';
+// console.log('переменная ' + arc + ' это ' + typeof(arc));
+// // 2)
+// console.log('переменная ' + arc + ' это ' + typeof(parseInt(arc, 10)));
 
 // ******************
 // let soldier = {
@@ -85,3 +143,4 @@
 // ******************
 // let answer = prompt('Are you over 18?', 'yes');
 // console.log(answer);
+// ******************

@@ -1,12 +1,8 @@
-let soldier = {
-health: 400,
-armor: 100
-}
+// 1) 
+let arc = '23423';
+console.log('переменная ' + arc + ' это ' + typeof(arc));
+// 2)
+console.log('переменная ' + arc + ' это ' + typeof(parseInt(arc, 10)));
 
-let john = {
-    health: 100
-}
-
-john.__proto__ = soldier;
-console.log(john);
-console.log(john.armor);
+// ******************
+// let soldier = {
