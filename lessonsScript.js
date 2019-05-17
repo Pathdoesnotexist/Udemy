@@ -1,16 +1,54 @@
 // 'use strict';
-let bx = document.getElementById('box'),
-    bttn = document.getElementsByTagName('button'),
-    crcl = document.getElementsByClassName('circle'),
-    hrth = document.querySelectorAll('.heart'),
-    oneHrth = document.querySelector('.heart'),
-    wrppr = document.querySelector('.wrapper');
 
-bx.style.backgroundColor = 'blue';
-bttn[1].style.borderRadius = '100%';
-crcl[0].style.backgroundColor = 'red';
-crcl[1].style.backgroundColor = 'orange';
-crcl[2].style.backgroundColor = 'green';
+let button = document.querySelectorAll('button');
+let wrap = document.querySelector('.wrapper');
+let link = document.querySelector('a');
+
+// button[0].onclick = function() {
+// alert('вы нажали первую кнопку!');
+// }
+// button[0].addEventListener('mouseenter', function(){ 
+//     alert('вы навелись на первую кнопку');
+// });
+
+// button[0].addEventListener('click', function (event) {
+//     // console.log(event);
+//     // let target = event.target;
+//     console.log('произошло событие: ' + event.type + ' на элементе ' +
+//         event.target);
+//     // target.style.display = 'none';
+
+// });
+
+// wrap.addEventListener('click', function () {
+//     console.log('произошло событие: ' + event.type + ' на элементе ' + event.target);
+// });
+
+// link.addEventListener('click', function (event) {
+//     event.preventDefault();
+//     console.log('произошло событие: ' + event.type + ' на элементе ' + event.target);
+// });
+
+button.forEach(function (item) {
+    item.addEventListener('mouseleave', function () {
+        console.log('Вышли!!');
+    })
+})
+
+
+////////////////////////////////////////////////////////////////////
+// let bx = document.getElementById('box'),
+//     bttn = document.getElementsByTagName('button'),
+//     crcl = document.getElementsByClassName('circle'),
+//     hrth = document.querySelectorAll('.heart'),
+//     oneHrth = document.querySelector('.heart'),
+//     wrppr = document.querySelector('.wrapper');
+
+// bx.style.backgroundColor = 'blue';
+// bttn[1].style.borderRadius = '100%';
+// crcl[0].style.backgroundColor = 'red';
+// crcl[1].style.backgroundColor = 'orange';
+// crcl[2].style.backgroundColor = 'green';
 
 
 //ДВА СПОСОБА ПЕРЕБОРА ДОМ-ЭЛЕМЕНТОВ
@@ -22,25 +60,28 @@ crcl[2].style.backgroundColor = 'green';
 //     item.style.backgroundColor = 'blue';
 // });
 
-let div = document.createElement('div');
-let text = document.createTextNode('Тут был я');
-div.classList.add('black');
+// let div = document.createElement('div');
+// let text = document.createTextNode('Тут был я');
+// div.classList.add('black');
 
 //ДВА СПОСОБА ДОБАВЛЕНИЯ ДОМ-ЭЛЕМЕНТОВ В КОНЕЦ ДЕРЕВА
 
 // document.body.appendChild(div);
 // wrppr.appendChild(div);
 
-document.body.insertBefore(div, crcl[0]);
-document.body.removeChild(crcl[1]);
-wrppr.removeChild(hrth[1]);
+// document.body.insertBefore(div, crcl[0]);
+// document.body.removeChild(crcl[1]);
+// wrppr.removeChild(hrth[1]);
 
 // div.innerHTML = 'Hello, WORLD!';
 // div.innerHTML = '<h1>Hello, WORLD!</h1>';
-div.textContent = '<h1>Hello, WORLD!</h1>';
 
-document.body.replaceChild(bttn[1], crcl[1]);
-console.log(div);
+
+// div.textContent = '<h1>Hello, WORLD!</h1>';
+
+// document.body.replaceChild(bttn[1], crcl[1]);
+// console.log(div);
+
 // console.log(bx);
 // console.log(bttn);
 // console.log(bttn[0]);
@@ -52,7 +93,7 @@ console.log(div);
 
 
 
-// ******************
+////////////////////////////////////////////////////////////////////////////////
 // TO STRING 
 // 1) 
 // let arc = '23423';
@@ -60,7 +101,7 @@ console.log(div);
 // // 2)
 // console.log('переменная ' + arc + ' это ' + typeof(parseInt(arc, 10)));
 
-// ******************
+////////////////////////////////////////////////////////////////////////
 // let soldier = {
 // health: 400,
 // armor: 100
@@ -106,7 +147,7 @@ console.log(div);
 
 
 
-// ******************
+////////////////////////////////////////////////////////////////////////
 // function first() {
 // setTimeout( function(){
 // console.log(1);
