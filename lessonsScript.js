@@ -1,8 +1,38 @@
 // 'use strict';
 
-let button = document.querySelectorAll('button');
-let wrap = document.querySelector('.wrapper');
-let link = document.querySelector('a');
+
+
+
+
+
+
+
+
+//////////////////////////////////раздел 3//////////////////////////////////
+// let str = 'My name is R2D2';
+
+// console.log(str.match(/\w\d\w\d/i));
+
+//touchstart
+//touchmove
+//touchend
+//touchenter
+//touchleave
+//touchcancel
+
+// let answer = prompt('Введите ваше имя', 'Иван');
+// let reg = /n/gi;
+// // console.log(answer.search(reg));
+// console.log(answer.match(reg));
+// console.log(reg.test());  
+
+// let pass = prompt('введите пароль');
+// console.log(pass.replace(/./g, '*'));
+// alert('12-34-54'.replace(/-/g, ':'));
+
+// let button = document.querySelectorAll('button');
+// let wrap = document.querySelector('.wrapper');
+// let link = document.querySelector('a');
 
 // button[0].onclick = function() {
 // alert('вы нажали первую кнопку!');
@@ -29,11 +59,11 @@ let link = document.querySelector('a');
 //     console.log('произошло событие: ' + event.type + ' на элементе ' + event.target);
 // });
 
-button.forEach(function (item) {
-    item.addEventListener('mouseleave', function () {
-        console.log('Вышли!!');
-    })
-})
+// button.forEach(function (item) {
+//     item.addEventListener('mouseleave', function () {
+//         console.log('Вышли!!');
+//     });
+// });
 
 
 ////////////////////////////////////////////////////////////////////
