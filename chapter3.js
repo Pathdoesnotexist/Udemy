@@ -1,6 +1,119 @@
-// 'use strict';
-alert('Lesson 6');
+// 'use strict'; 
+alert('Lesson 3-27');
 
+
+
+////////////////////////////////ЗАДАНИЕ 11 ЧАСТЬ 2////////////////////////////////////////////////////////
+// let age = document.getElementById('age');
+// function showUser(surname, name) {
+// 	alert("Пользователь " + surname + " " + name + ", его возраст " + this.value);
+// }
+// showUser.call(age, 'Пупков', 'Геннадий');
+
+////////////////////////////////////////////////////////////////////////////////////////
+// let btn = document.querySelector('button');
+
+// btn.addEventListener('click', function() {
+//     console.log(this);
+//     this.style.backgroundColor = 'red';
+// function showThis() {
+//     console.log(this);
+// }
+// showThis();
+// });
+
+
+
+// let user = {
+//     name: 'John'
+// };
+
+// function sayName(surname) {
+//     console.log(this);
+//     console.log(this.name + surname);
+// }
+
+// console.log(sayName.call(user, 'Smirnov'));
+// console.log(sayName.apply(user, ['Snow']));
+
+// function count(number) {
+// return this * number;
+// }
+
+// let double = count.bind(2);
+// console.log(double(3));
+// console.log(double(10));
+
+
+
+// let obj = {
+//     a: 20,
+//     b: 15,
+//     sum: function(){
+//         console.log(this);
+//         function shout(){
+//             console.log(this);
+//         }
+//         shout();
+//     }
+// }
+// obj.sum();
+
+
+// function showThis(a, b) {
+//     console.log(this);
+
+//     function sum() {
+//         console.log(this);
+//         return a + b;
+//     }
+//     console.log(sum());
+// }
+// showThis(4, 5);
+// showThis(5, 5);
+
+
+// function User(name, id) {
+//     this.name = name;
+//     this.id = id;
+//     this.human = true;
+//     this.hello = function() {
+//         console.log('Hello ' + this.name);
+//     }
+// }
+
+// User.prototype.exit = function(name) {
+//     console.log('User ' + this.name + 'has gone');
+// }
+
+// let ivan = new User('Ivan', 25);
+// let alex = new User('Alex', 20);
+
+// console.log(ivan);
+// console.log(alex);
+
+
+
+////////////////////////////////////////////////////////////////////////////
+// function User(name, id) {
+//     this.name = name;
+//     this.id = id;
+//     this.human = true;
+//     this.hello = function() {
+//         console.log('Hello ' + this.name);
+//     }
+// }
+
+// User.prototype.exit = function(name) {
+//     console.log('User ' + this.name + 'has gone');
+// }
+
+// let ivan = new User('Ivan', 25);
+// let alex = new User('Alex', 20);
+
+// console.log(ivan);
+// console.log(alex);
+//////////////////////////////////////////////////////////////////////////////////////
 // setTimeout(sayHello, 3000); - ВЫПОЛНЯЕТСЯ СРАЗУ КАК ЗАГРУЗИЛАСЬ СТРАНИЦА
 // let timerId = setTimeout(sayHello, 3000);
 // clearTimeout(timerId);
@@ -16,35 +129,35 @@ alert('Lesson 6');
 //     console.log('Hello!');
 //     setTimeout(log, 2000);
 // });
+//////////////////////////////////////////////////////////////////////////
+// let button = document.querySelector('.btn'),
+//     box = document.querySelector('.box');
 
-let button = document.querySelector('.btn'),
-    box = document.querySelector('.box');
+// function myAnimation() {
+//     let pos = 0;
+//     let id = setInterval(frame, 10);
 
-function myAnimation() {
-    let pos = 0;
-    let id = setInterval(frame, 10);
+//     function frame() {
+//         if (pos == 300) {
+//             clearInterval(id);
+//         } else {
+//             pos++;
+//             box.style.top = pos + 'px';
+//             box.style.left = pos + 'px';
+//         }
+//     }
+// }
+// button.addEventListener('click', myAnimation);
 
-    function frame() {
-        if (pos == 300) {
-            clearInterval(id);
-        } else {
-            pos++;
-            box.style.top = pos + 'px';
-            box.style.left = pos + 'px';
-        }
-    }
-}
-button.addEventListener('click', myAnimation);
+// let btnBlock = document.querySelector('.btn-block'),
+//     btns = document.getElementsByTagName('button');
 
-let btnBlock = document.querySelector('.btn-block'),
-    btns = document.getElementsByTagName('button');
-
-btnBlock.addEventListener('click', function(event) {
-// if (event.target && event.target.classList.contains('first')) { - ЫВРИАНТ ПОИСК КОНКРЕТНОГО КЛАССА
-    if (event.target && event.target.matches('button.first')) {
-console.log('Нажатие!');
-}
-});
+// btnBlock.addEventListener('click', function(event) {
+// // if (event.target && event.target.classList.contains('first')) { - ЫВРИАНТ ПОИСК КОНКРЕТНОГО КЛАССА
+//     if (event.target && event.target.matches('button.first')) {
+// console.log('Нажатие!');
+// }
+// });
 
 
 
