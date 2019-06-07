@@ -1,25 +1,53 @@
+/* eslint-disable no-console */
 // 'use strict'; 
-alert('Lesson 3-27');
+alert('Lesson 4-35');
 
 
 
 
 
-let video = ['youtube', 'vimeo', 'rutube'];
-let blogs = ['wordpress', 'lj', 'blogger'];
-let internet = [...video, ...blogs, 'vk', 'facebooks'];
 
-console.log(internet);
 
-function log (a, b, c) {
-    console.log(a);
-    console.log(b);
-    console.log(c);
-}
 
-let numbers = [2, 5, 7];
 
-log(...numbers);
+
+
+
+
+
+//4.32////////////////////////////////
+let options = {
+    width: 1366,
+    height: 768,
+    background: 'red',
+    font: {
+        size: '16px',
+        color: '#fff'
+    }
+};
+
+console.log(JSON.stringify(options));
+console.log(typeof(JSON.stringify(options)));
+console.log(JSON.parse(JSON.stringify(options)));
+console.log(typeof(JSON.parse(JSON.stringify(options))));
+
+
+//3.32////////////////////////////////
+// let video = ['youtube', 'vimeo', 'rutube'];
+// let blogs = ['wordpress', 'lj', 'blogger'];
+// let internet = [...video, ...blogs, 'vk', 'facebooks'];
+
+// console.log(internet);
+
+// function log (a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+
+// let numbers = [2, 5, 7];
+
+// log(...numbers);
 
 
 
