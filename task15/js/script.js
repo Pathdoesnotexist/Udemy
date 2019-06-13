@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
     'use strict';
-    alert('Задание №13, скрипт подключен');
+    alert('Задание №15, скрипт подключен');
 
     //СОЗДАЕМ РАБОТАЮЩИЕ ТАБЫ
 
@@ -116,6 +116,7 @@ window.addEventListener('DOMContentLoaded', function () {
     });
 
     //ФОРМА ОБРАТНОЙ СВЯЗИ
+    //ДЛЯ ПРОВЕРКИ РАБОТЫ НУЖЕН ЛОКАЛЬНЫЙ СЕРВЕР!!
 
     let message = { // содержит различные состояния запроса
         loading: 'Загрузка',
@@ -139,9 +140,9 @@ window.addEventListener('DOMContentLoaded', function () {
         request.setRequestHeader('Content-type', 'application/json; charset=utf-8'); //json отсылается
 
         let formData = new FormData(form); //получаем ответ пользователя в виде пары ключ-значение
-        
-        let obj = {};  //ТАК КАК ФОРМ ДАЕТ НЕСТАНДАРТНЫЙ ТИП ОБЪЕКТА ДЛЯ STRINGIFY НЕОБХОДИМО СОЗДАТЬ ИЗ НЕГО ОБЫЧНЫЙ ОБЪЕКТ
-        formData.forEach(function(value, key){
+
+        let obj = {}; //ТАК КАК ФОРМ ДАЕТ НЕСТАНДАРТНЫЙ ТИП ОБЪЕКТА ДЛЯ STRINGIFY НЕОБХОДИМО СОЗДАТЬ ИЗ НЕГО ОБЫЧНЫЙ ОБЪЕКТ
+        formData.forEach(function (value, key) {
             obj[key] = value;
         });
         let json = JSON.stringify(obj); //преобразуем в JSON формат
@@ -157,14 +158,65 @@ window.addEventListener('DOMContentLoaded', function () {
                 statusMessage.innerHTML = message.failure;
             }
         });
-        for (let i = 0; i< input.length; i++) {
+        for (let i = 0; i < input.length; i++) {
             input[i].value = '';
         }
     });
 
+    // СОЗДАЕМ СЛАЙДЕР
 
+    let slideIndex = 1,
+        slides = document.querySelectorAll('.slider-item'),
+        prev = document.querySelector('.prev'),
+        next = document.querySelector('.next'),
+        dotsWrap = document.querySelector('.slider-dots'),
+        dots = document.querySelectorAll('.dot');
 
+    showSlides(slideIndex);
 
+    function showSlides(n) { //функция показа абстрактного слайда
 
+        if (n > slides.length) { //прокрутка на первый слайд
+            slideIndex = 1;
+        }
+
+        if (n < 1) { //прокрутка на последний слайд
+            slideIndex = slides.length;
+        }
+
+        slides.forEach((item) => item.style.display = 'none'); //СКРЫВАЕМ ВСЕ СЛАЙДЫ
+        dots.forEach((item) => item.classList.remove('dot-active')); //УБИРАЕМ ВЫДЕЛЕНИЕ С ТОЧКИ НАВИГАЦИИ
+        // for(let i = 0; i < slides.length;i++){     старый допустимый вариант написания
+        //     slides[i].style.display = 'none'
+        // }
+
+        slides[slideIndex - 1].style.display = 'block';
+        dots[slideIndex - 1].classList.add('dot-active');
+
+    }
+
+    function plusSlides(n) { //пролистывание вперед
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) { // показ конкретного слайда
+        showSlides(slideIndex = n);
+    }
+
+    prev.addEventListener('click', function(){ //слушатель пролистывания назад
+        plusSlides(-1);
+    });
+
+    next.addEventListener('click', function(){ //слушатель пролистывания вперед
+        plusSlides(1);
+    });
+
+    dotsWrap.addEventListener('click', function(event){
+        for(let i = 0; i < dots.length + 1; i++){
+            if (event.target.classList.contains('dot') && event.target == dots[i-1]){
+                currentSlide(i);
+            }
+        }
+    });
 
 });
