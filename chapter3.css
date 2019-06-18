@@ -8,12 +8,17 @@
    position: relative;
    width: 400px;
    height: 400px;
-   border: 3px solid red;
+   border: 10px solid red;
  }
  .btn-block {
-    padding: 10px;
+    padding: 20px;
     background-color: grey;
     margin-top: 10px;
+ }
+ .list {
+      padding: 20px;
+      background-color: grey;
+      margin-top: 10px;
  }
  button {
    margin-bottom: 10px;
