@@ -1,6 +1,125 @@
 /* eslint-disable no-console */
 // 'use strict'; 
-alert('Lesson 4-38');
+alert('Lesson 4-41');
+/////////////4,41 webpack///////////////////////////
+
+function myModule () {
+    this.hello = function () {
+        return 'Hello!';
+    }
+
+    this.goodbye = function () {
+        return 'GoodBye!';
+    }
+}
+
+module.exports = myModule;
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+/////////////4,40 инкапсуляция///////////////////////////
+//1 метод - анонимные самовызывающиеся функции
+// let number = 1;
+
+// (function(){
+//     let number = 2;
+//     console.log(number);
+
+//     return console.log(number+3);
+// }
+// () // вызов созданной анонимной функции
+// )
+// console.log(number);
+// //2 метод - использование объектного интерфейса/
+// let user = (function(){
+//     let privat = function(){
+//         console.log('I am privat');
+//     }
+
+//     return {
+//         'sayHello' : function() {
+//             console.log('Hello');
+//         }
+//     }
+// }
+// ()
+// )
+// console.log(user);
+// console.log(user.sayHello);
+// console.log(user.sayHello());
+
+// //3 метод
+// let user = (function(){
+//     let privat = function(){
+//         console.log('I am privat');
+//     }
+
+//     let sayHello = function() {
+//         console.log('Hello');
+//     }
+
+//     return {
+//         'sayHello' : sayHello
+//         }
+//     }
+// ()
+// )
+// console.log(user);
+// console.log(user.sayHello);
+// console.log(user.sayHello());
+
+//////////////////////////////////////////////
+// function User(name, age) {
+//     this.name = name;
+//     // this.age = age;
+//     let userAge = age;
+
+//     this.say = function () {
+//         console.log(`Имя пользователя ${this.name}, восраст: ${userAge}`);
+//     }
+//     this.getAge = function () {
+//         return userAge;
+//     };
+//     this.setAge = function (age) {
+//         if (typeof age === 'number' && age > 0 && age < 110) {
+//         userAge = age;
+//         } else {
+//             console.log('Недопустимое значение');
+//         }
+//     }
+
+// }
+
+
+// let ivan = new User('Ivan', 25);
+// console.log(ivan.name);
+// console.log(ivan.userAge);
+// console.log(ivan.getAge());
+
+
+// ivan.setAge(30);
+// console.log(ivan.getAge());
+
+// ivan.say();
+
+
+
+
+
 /////////////4,39 jquery///////////////////////////
 // document.getElementById('btn'); <=> $('#btn')
 
@@ -9,18 +128,16 @@ $(document).ready(function () {
         $(this).toggleClass('active');
     });
 
-$('.list-item:eq(2)').on('click', function(){
-    $('.image:even').fadeToggle('slow');
-})    
+    $('.list-item:eq(2)').on('click', function () {
+        $('.image:even').fadeToggle('slow');
+    })
 
-$('.list-item:eq(4)').on('click', function (){
-    $('.image:odd').animate(
-        {
+    $('.list-item:eq(4)').on('click', function () {
+        $('.image:odd').animate({
             opacity: 'toggle',
             height: 'toggle',
-        }, 3000
-    );
-})
+        }, 3000);
+    })
 
 });
 
