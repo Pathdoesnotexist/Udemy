@@ -1,0 +1,1 @@
+alert('ReactJS test script');
